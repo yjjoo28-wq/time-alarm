@@ -172,7 +172,7 @@
               <span>💻 실시간 시간표 동작 테스트 모드</span>
             </button>
             <div class="flex items-center space-x-2">
-              <button id="reset_mock_time_btn" title="테스트 기본값 리셋" class="p-1 hover:bg-zinc-200/60 text-zinc-500 rounded transition-colors cursor-pointer">
+              <button id="reset_mock_time_btn" title="테스트 기본값 리셋" class="p-1 hover:bg-zinc-200/60 hover:text-blue-500 hover-spin-reverse text-zinc-500 rounded transition-all duration-300 transform hover:scale-110 active:scale-95 cursor-pointer">
                 <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
               </button>
               <span id="test_indicator_dot" class="w-2.5 h-2.5 rounded-full bg-zinc-300"></span>
@@ -183,12 +183,12 @@
             <!-- Weekday tests -->
             <div>
               <label class="text-[11px] font-bold text-zinc-400 block mb-1.5 uppercase">테스트 요일 선택</label>
-              <div class="grid grid-cols-5 gap-1.5">
-                <button id="mock_day_btn_1" type="button" class="py-1 text-xs font-semibold rounded-md border text-zinc-650 bg-zinc-50 border-zinc-200 hover:bg-zinc-100 cursor-pointer">월</button>
-                <button id="mock_day_btn_2" type="button" class="py-1 text-xs font-semibold rounded-md border text-zinc-650 bg-zinc-50 border-zinc-200 hover:bg-zinc-100 cursor-pointer">화</button>
-                <button id="mock_day_btn_3" type="button" class="py-1 text-xs font-semibold rounded-md border text-zinc-650 bg-zinc-50 border-zinc-200 hover:bg-zinc-100 cursor-pointer">수</button>
-                <button id="mock_day_btn_4" type="button" class="py-1 text-xs font-semibold rounded-md border text-zinc-650 bg-zinc-50 border-zinc-200 hover:bg-zinc-100 cursor-pointer">목</button>
-                <button id="mock_day_btn_5" type="button" class="py-1 text-xs font-semibold rounded-md border text-zinc-650 bg-zinc-50 border-zinc-200 hover:bg-zinc-100 cursor-pointer">금</button>
+               <div class="grid grid-cols-5 gap-1.5">
+                <button id="mock_day_btn_1" type="button" class="py-1 text-xs font-semibold rounded-md border text-zinc-650 bg-zinc-50 border-zinc-200 hover:bg-zinc-100 hover:border-zinc-300 hover:text-blue-600 transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer">월</button>
+                <button id="mock_day_btn_2" type="button" class="py-1 text-xs font-semibold rounded-md border text-zinc-650 bg-zinc-50 border-zinc-200 hover:bg-zinc-100 hover:border-zinc-300 hover:text-blue-600 transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer">화</button>
+                <button id="mock_day_btn_3" type="button" class="py-1 text-xs font-semibold rounded-md border text-zinc-650 bg-zinc-50 border-zinc-200 hover:bg-zinc-100 hover:border-zinc-300 hover:text-blue-600 transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer">수</button>
+                <button id="mock_day_btn_4" type="button" class="py-1 text-xs font-semibold rounded-md border text-zinc-650 bg-zinc-50 border-zinc-200 hover:bg-zinc-100 hover:border-zinc-300 hover:text-blue-600 transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer">목</button>
+                <button id="mock_day_btn_5" type="button" class="py-1 text-xs font-semibold rounded-md border text-zinc-650 bg-zinc-50 border-zinc-200 hover:bg-zinc-100 hover:border-zinc-300 hover:text-blue-600 transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer">금</button>
               </div>
             </div>
 
@@ -218,12 +218,12 @@
             <div>
               <label class="text-[11px] font-bold text-zinc-400 block mb-1.5 uppercase">원클릭 시나리오 사전 세팅</label>
               <div class="flex flex-wrap gap-1">
-                <button id="preset_scen_0" type="button" class="px-2.5 py-1 bg-zinc-50 hover:bg-zinc-100 border border-zinc-150 text-[11px] rounded text-zinc-650 font-semibold cursor-pointer">1교시 전 (08:00)</button>
-                <button id="preset_scen_1" type="button" class="px-2.5 py-1 bg-zinc-50 hover:bg-zinc-100 border border-zinc-150 text-[11px] rounded text-zinc-650 font-semibold cursor-pointer">1교시 수업 (08:25)</button>
-                <button id="preset_scen_2" type="button" class="px-2.5 py-1 bg-zinc-50 hover:bg-zinc-100 border border-zinc-150 text-[11px] rounded text-zinc-650 font-semibold cursor-pointer">쉬는 시간 (10:04)</button>
-                <button id="preset_scen_3" type="button" class="px-2.5 py-1 bg-zinc-50 hover:bg-zinc-100 border border-zinc-150 text-[11px] rounded text-zinc-650 font-semibold cursor-pointer">🍱 점심시간 (12:20)</button>
-                <button id="preset_scen_4" type="button" class="px-2.5 py-1 bg-zinc-50 hover:bg-zinc-100 border border-zinc-150 text-[11px] rounded text-zinc-650 font-semibold cursor-pointer">7교시 수업 (15:15)</button>
-                <button id="preset_scen_5" type="button" class="px-2.5 py-1 bg-zinc-50 hover:bg-zinc-100 border border-zinc-150 text-[11px] rounded text-zinc-650 font-semibold cursor-pointer">하교 후 (16:10)</button>
+                <button id="preset_scen_0" type="button" class="px-2.5 py-1 bg-zinc-50 hover:bg-zinc-100 border border-zinc-150 hover:border-zinc-300 hover:text-blue-600 hover:shadow-xxs text-[11px] rounded text-zinc-650 font-semibold cursor-pointer transition-all duration-300 transform hover:scale-105 active:scale-95">1교시 전 (08:00)</button>
+                <button id="preset_scen_1" type="button" class="px-2.5 py-1 bg-zinc-50 hover:bg-zinc-100 border border-zinc-150 hover:border-zinc-300 hover:text-blue-600 hover:shadow-xxs text-[11px] rounded text-zinc-650 font-semibold cursor-pointer transition-all duration-300 transform hover:scale-105 active:scale-95">1교시 수업 (08:25)</button>
+                <button id="preset_scen_2" type="button" class="px-2.5 py-1 bg-zinc-50 hover:bg-zinc-100 border border-zinc-150 hover:border-zinc-300 hover:text-blue-600 hover:shadow-xxs text-[11px] rounded text-zinc-650 font-semibold cursor-pointer transition-all duration-300 transform hover:scale-105 active:scale-95">쉬는 시간 (10:04)</button>
+                <button id="preset_scen_3" type="button" class="px-2.5 py-1 bg-zinc-50 hover:bg-zinc-100 border border-zinc-150 hover:border-zinc-300 hover:text-blue-600 hover:shadow-xxs text-[11px] rounded text-zinc-650 font-semibold cursor-pointer transition-all duration-300 transform hover:scale-105 active:scale-95">🍱 점심시간 (12:20)</button>
+                <button id="preset_scen_4" type="button" class="px-2.5 py-1 bg-zinc-50 hover:bg-zinc-100 border border-zinc-150 hover:border-zinc-300 hover:text-blue-600 hover:shadow-xxs text-[11px] rounded text-zinc-650 font-semibold cursor-pointer transition-all duration-300 transform hover:scale-105 active:scale-95">7교시 수업 (15:15)</button>
+                <button id="preset_scen_5" type="button" class="px-2.5 py-1 bg-zinc-50 hover:bg-zinc-100 border border-zinc-150 hover:border-zinc-300 hover:text-blue-600 hover:shadow-xxs text-[11px] rounded text-zinc-650 font-semibold cursor-pointer transition-all duration-300 transform hover:scale-105 active:scale-95">하교 후 (16:10)</button>
               </div>
             </div>
           </div>
@@ -265,7 +265,7 @@
           <button 
             id="modal_close_btn"
             type="button"
-            class="p-2 rounded-lg border border-zinc-150 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-400 transition-colors cursor-pointer"
+            class="p-2 rounded-lg border border-zinc-150 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-400 hover-rotate-90 hover:text-red-500 transition-all duration-300 transform hover:scale-110 active:scale-95 cursor-pointer"
           >
             <i data-lucide="x" class="w-4 h-4"></i>
           </button>

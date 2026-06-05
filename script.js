@@ -513,20 +513,20 @@ function render() {
     
     // Toggle Button
     const dmBtn = document.getElementById("dark_mode_toggle_btn");
-    dmBtn.className = "p-2 rounded-xl border border-zinc-700 bg-zinc-800 text-yellow-400 hover:bg-zinc-700/80 transition-all active:scale-95 cursor-pointer";
+    dmBtn.className = "p-2 rounded-xl border border-zinc-700 bg-zinc-800 text-yellow-400 hover:bg-zinc-700/80 transition-all duration-300 transform hover:scale-110 active:scale-95 hover-rotate cursor-pointer";
     dmBtn.innerHTML = `<i data-lucide="sun" class="w-4 h-4"></i>`;
     
     // Bell Chime Button
     const bellChimeBtn = document.getElementById("bell_chime_btn");
-    bellChimeBtn.className = "p-2 rounded-xl border border-zinc-800 bg-zinc-800/40 text-zinc-400 hover:text-blue-400 hover:bg-zinc-800 hover:border-zinc-700 transition-all active:scale-95 cursor-pointer";
+    bellChimeBtn.className = "p-2 rounded-xl border border-zinc-800 bg-zinc-800/40 text-zinc-400 hover:text-blue-400 hover:bg-zinc-800 hover:border-zinc-700 transition-all duration-300 transform hover:scale-110 active:scale-95 hover-wiggle cursor-pointer";
     
     // Sound Bell Toggle
     const stBtn = document.getElementById("sound_toggle_btn");
     stBtn.className = state.soundEnabled 
-      ? "p-2 rounded-xl border border-blue-900/50 bg-blue-950/40 text-blue-400 transition-all active:scale-95 cursor-pointer" 
-      : "p-2 rounded-xl border border-zinc-800 bg-zinc-800/40 text-zinc-500 transition-all active:scale-95 cursor-pointer";
+      ? "p-2 rounded-xl border border-blue-900/50 bg-blue-950/40 text-blue-400 transition-all duration-300 transform hover:scale-110 active:scale-95 hover-bounce cursor-pointer" 
+      : "p-2 rounded-xl border border-zinc-800 bg-zinc-800/40 text-zinc-500 transition-all duration-300 transform hover:scale-110 active:scale-95 hover-bounce cursor-pointer";
 
-    document.getElementById("toggle_mock_mode_btn").className = "flex items-center space-x-2 text-xs font-bold text-zinc-300 hover:text-zinc-100 transition-colors cursor-pointer";
+    document.getElementById("toggle_mock_mode_btn").className = "flex items-center space-x-2 text-xs font-bold text-zinc-300 hover:text-zinc-100 transition-all duration-300 transform hover:scale-103 active:scale-97 cursor-pointer";
   } else {
     document.documentElement.classList.remove("dark");
     document.getElementById("master_container").className = "min-h-screen py-6 px-4 md:py-10 bg-slate-50 text-zinc-800 transition-colors duration-300";
@@ -539,20 +539,20 @@ function render() {
     
     // Toggle Button
     const dmBtn = document.getElementById("dark_mode_toggle_btn");
-    dmBtn.className = "p-2 rounded-xl border border-zinc-100 text-zinc-400 hover:text-amber-500 hover:bg-amber-50 hover:border-amber-100 transition-all active:scale-95 cursor-pointer";
+    dmBtn.className = "p-2 rounded-xl border border-zinc-100 text-zinc-400 hover:text-amber-500 hover:bg-amber-50 hover:border-amber-100 transition-all duration-300 transform hover:scale-110 active:scale-95 hover-rotate cursor-pointer";
     dmBtn.innerHTML = `<i data-lucide="moon" class="w-4 h-4"></i>`;
     
     // Bell Chime Button
     const bellChimeBtn = document.getElementById("bell_chime_btn");
-    bellChimeBtn.className = "p-2 rounded-xl border border-zinc-100 text-zinc-400 hover:text-blue-600 hover:bg-blue-50/50 transition-all active:scale-95 cursor-pointer";
+    bellChimeBtn.className = "p-2 rounded-xl border border-zinc-100 text-zinc-400 hover:text-blue-600 hover:bg-blue-50/50 transition-all duration-300 transform hover:scale-110 active:scale-95 hover-wiggle cursor-pointer";
     
     // Sound Bell Toggle
     const stBtn = document.getElementById("sound_toggle_btn");
     stBtn.className = state.soundEnabled 
-      ? "p-2 rounded-xl border border-blue-100 bg-blue-50/50 text-blue-600 transition-all active:scale-95 cursor-pointer" 
-      : "p-2 rounded-xl border border-zinc-100 bg-zinc-50 text-zinc-300 transition-all active:scale-95 cursor-pointer";
+      ? "p-2 rounded-xl border border-blue-100 bg-blue-50/50 text-blue-600 transition-all duration-300 transform hover:scale-110 active:scale-95 hover-bounce cursor-pointer" 
+      : "p-2 rounded-xl border border-zinc-100 bg-zinc-50 text-zinc-300 transition-all duration-300 transform hover:scale-110 active:scale-95 hover-bounce cursor-pointer";
 
-    document.getElementById("toggle_mock_mode_btn").className = "flex items-center space-x-2 text-xs font-bold text-zinc-700 hover:text-zinc-900 transition-colors cursor-pointer";
+    document.getElementById("toggle_mock_mode_btn").className = "flex items-center space-x-2 text-xs font-bold text-zinc-700 hover:text-zinc-900 transition-all duration-300 transform hover:scale-103 active:scale-97 cursor-pointer";
   }
 
   // --- AUTOMATIC CHIME TRIGGER MONITOR ---
@@ -653,12 +653,12 @@ function render() {
     // Apply exact visual specs matching React markup
     if (isSelected) {
       tabEl.className = state.isDarkMode
-        ? "py-2 text-xs font-bold rounded-lg transition-all relative cursor-pointer select-none bg-zinc-850 text-blue-450 shadow-xs border border-zinc-700/80"
-        : "py-2 text-xs font-bold rounded-lg transition-all relative cursor-pointer select-none bg-white text-blue-600 shadow-xs";
+        ? "py-2 text-xs font-bold rounded-lg transition-all duration-300 relative cursor-pointer select-none bg-zinc-850 text-blue-450 shadow-xs border border-zinc-700/80 transform hover:scale-105 active:scale-95 tab-animation tab-animation-active"
+        : "py-2 text-xs font-bold rounded-lg transition-all duration-300 relative cursor-pointer select-none bg-white text-blue-600 shadow-xs transform hover:scale-105 active:scale-95 tab-animation tab-animation-active";
     } else {
       tabEl.className = state.isDarkMode
-        ? "py-2 text-xs font-bold rounded-lg transition-all relative cursor-pointer select-none text-zinc-300 hover:text-white hover:bg-zinc-800/30"
-        : "py-2 text-xs font-bold rounded-lg transition-all relative cursor-pointer select-none text-zinc-500 hover:text-zinc-800";
+        ? "py-2 text-xs font-bold rounded-lg transition-all duration-300 relative cursor-pointer select-none text-zinc-300 hover:text-white hover:bg-zinc-800/30 transform hover:scale-105 active:scale-95 tab-animation"
+        : "py-2 text-xs font-bold rounded-lg transition-all duration-300 relative cursor-pointer select-none text-zinc-500 hover:text-zinc-800 transform hover:scale-105 active:scale-95 tab-animation";
     }
     
     // Sync indicator dot
@@ -1058,7 +1058,7 @@ const renderMapModal = () => {
         listHtml += `
           <button
             type="button"
-            class="search-select-btn w-full flex items-center justify-between p-2 rounded-xl border text-left transition-all cursor-pointer ${btnBg}"
+            class="search-select-btn w-full flex items-center justify-between p-2 rounded-xl border text-left transition-all duration-300 transform hover:translate-x-1 hover:shadow-xs active:scale-98 cursor-pointer ${btnBg}"
             data-room="${room.name}"
             data-floor="${room.floor}"
           >
@@ -1111,7 +1111,7 @@ const renderMapModal = () => {
       floorsHeaderHtml += `
         <button
           type="button"
-          class="floor-tab-btn py-1 text-[11px] font-bold rounded-lg transition-all relative cursor-pointer ${fBtnStyle}"
+          class="floor-tab-btn py-1 text-[11px] font-bold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 relative cursor-pointer ${fBtnStyle}"
           data-floor="${fl}"
         >
           ${fl}F
@@ -1159,7 +1159,7 @@ const renderMapModal = () => {
         floorGridHtml += `
           <button
             type="button"
-            class="grid-room-select-btn p-2 rounded-xl border text-center transition-all cursor-pointer h-16 flex flex-col justify-between ${btnTheme}"
+            class="grid-room-select-btn p-2 rounded-xl border text-center transition-all duration-300 transform hover:scale-105 hover:shadow-xs active:scale-95 cursor-pointer h-16 flex flex-col justify-between ${btnTheme}"
             data-room="${room.name}"
           >
             <div class="flex justify-between items-start w-full">
@@ -1264,10 +1264,10 @@ const renderMapModal = () => {
     const isSelected = state.manualRoomVal === pItem;
     const pBtn = document.createElement("button");
     pBtn.type = "button";
-    pBtn.className = `px-2 py-0.8 text-[10px] rounded-lg font-bold border transition-all cursor-pointer ${
+    pBtn.className = `px-2 py-0.8 text-[10px] rounded-lg font-bold border transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer ${
       isSelected
-        ? 'bg-blue-600 border-blue-600 text-white'
-        : (state.isDarkMode ? 'bg-zinc-800 border-zinc-700/60 text-zinc-300 hover:border-zinc-600' : 'bg-zinc-50 border-zinc-150 text-zinc-600 hover:bg-zinc-100')
+        ? 'bg-blue-600 border-blue-600 text-white shadow-xs'
+        : (state.isDarkMode ? 'bg-zinc-800 border-zinc-700/60 text-zinc-300 hover:border-zinc-600' : 'bg-zinc-50 border-zinc-150 text-zinc-600 hover:bg-zinc-100 hover:border-zinc-250')
     }`;
     pBtn.innerText = pItem;
     pBtn.addEventListener("click", () => {
