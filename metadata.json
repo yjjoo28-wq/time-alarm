@@ -1,0 +1,6 @@
+{
+  "name": "잠일고 이동수업 마스터",
+  "description": "잠일고등학교 학생들을 위한 실시간 이동수업 및 수업 시간 카운트다운 타이머 서비스",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
