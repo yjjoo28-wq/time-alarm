@@ -1444,4 +1444,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initial Bootup Render
   render();
+
+  // Tick time every second and re-render
+  setInterval(() => {
+    state.currentTime = new Date();
+    
+    if (state.mockEnabled) {
+      state.mockSeconds++;
+      if (state.mockSeconds >= 60) {
+        state.mockSeconds = 0;
+        state.mockMinutes++;
+        if (state.mockMinutes >= 24 * 60) {
+          state.mockMinutes = 0;
+          state.mockDay = (state.mockDay % 5) + 1; // Mon-Fri
+        }
+      }
+    }
+    
+    render();
+  }, 1000);
 });
